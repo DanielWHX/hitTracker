@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title>PokeSpot Tracker</title>
     <style>
-        body {
-            background-image: url("ChatGPT Image 2025年5月14日 23_00_44.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 30px;
-        }
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("ChatGPT Image 2025年5月14日 23_00_44.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    }
 
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
 
         h2 {
             font-size: 1.5em;
@@ -56,12 +59,24 @@
         }
 
         .section-box {
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-    border-radius: 12px;
-    padding: 10px 20px;
-    margin: 20px auto;
-    display: inline-block;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+        border-radius: 12px;
+        padding: 10px 20px;
+        margin: 20px auto;
+        display: inline-block;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* 若想完全垂直居中可用 center */
+    min-height: 100vh;
+    padding-top: 80px; /* 控制整体向下偏移的程度 */
+    box-sizing: border-box;
+    text-align: center;
+    }
+
 }
 
 
@@ -79,17 +94,20 @@
 </head>
 <body>
 
-    <h1>🔥 Please Follow PokeSpot!!! 🔥</h1>
-    <div class="section-box">
-        <h2 class="pulsing-text with-blinking-star">SAR Always LIVE!!!</h2>
-        <h2>🔥 SR 🔥</h2>
-        <div id="srContainer"></div>
+    <div class="container">
+        <h1>🔥 Please Follow PokeSpot!!! 🔥</h1>
+        <div class="section-box">
+            <h2 class="pulsing-text with-blinking-star">SAR Always LIVE!!!</h2>
+            <h2>🔥 SR 🔥</h2>
+            <div id="srContainer"></div>
+        </div>
+    
+        <div class="section-box">
+            <h2>🔥 AR 🔥</h2>
+            <div id="arContainer"></div>
+        </div>
     </div>
-
-    <div class="section-box">
-        <h2>🔥 AR 🔥</h2>
-        <div id="arContainer"></div>
-    </div>
+    
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
