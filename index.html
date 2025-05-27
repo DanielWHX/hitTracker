@@ -27,16 +27,31 @@
             display: inline-block;
         }
 
-        .blinking-cursor::after {
-            content: '|';
-            animation: blink 1s step-start infinite;
-            color: #FFD700;
-            margin-left: 5px;
+        .with-blinking-star::after {
+        content: ' ✨';
+        animation: blink 1s infinite;
         }
 
         @keyframes blink {
-            50% { opacity: 0; }
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
         }
+
+        .pulsing-text {
+        font-weight: bold;
+        animation: floatText 1.2s ease-in-out infinite;
+        }
+
+        @keyframes floatText {
+        0%, 100% {
+        transform: translateY(0);
+        }
+        50% {
+        transform: translateY(-5px);
+        }
+}
+
+
 
         .section {
             margin: 30px 0;
@@ -57,7 +72,7 @@
 <body>
 
     <h1>🔥 Please Follow PokeSpot!!! 🔥</h1>
-    <h2 class="blinking-cursor">SAR Always LIVE!!!</h2>
+    <h2 class="pulsing-text with-blinking-star">SAR Always LIVE!!!</h2>
 
     <div class="section">
         <h2>🔥 SR 🔥</h2>
